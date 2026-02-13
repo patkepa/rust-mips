@@ -1,0 +1,8 @@
+services:
+  builder:
+    build: .
+    volumes:
+      - ./output:/output
+    entrypoint: >
+      sh -c "cp target/mips-unknown-linux-musl/release/rust-test-mips /output/
+             && echo 'Binary copied to ./output/rust-test-mips'"
